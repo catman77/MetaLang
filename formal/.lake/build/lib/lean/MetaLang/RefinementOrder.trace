@@ -1,0 +1,37 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["e1d4e9943e1fb269.olean"],
+  "i": "38f8da6cd621799c.ilean",
+  "c": "d9d4abe9f3f22b5c.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/catman/CatmanCode/SymStructures-RH/.lake/packages/Cli/.lake/build/lib/lean:/home/catman/CatmanCode/SymStructures-RH/.lake/packages/batteries/.lake/build/lib/lean:/home/catman/CatmanCode/SymStructures-RH/.lake/packages/Qq/.lake/build/lib/lean:/home/catman/CatmanCode/SymStructures-RH/.lake/packages/aesop/.lake/build/lib/lean:/home/catman/CatmanCode/SymStructures-RH/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/catman/CatmanCode/SymStructures-RH/.lake/packages/importGraph/.lake/build/lib/lean:/home/catman/CatmanCode/SymStructures-RH/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/catman/CatmanCode/SymStructures-RH/.lake/packages/plausible/.lake/build/lib/lean:/home/catman/CatmanCode/SymStructures-RH/.lake/packages/mathlib/.lake/build/lib/lean:/home/catman/CatmanCode/MetaLang/formal/.lake/build/lib/lean /home/catman/.elan/toolchains/leanprover--lean4---v4.29.0-rc8/bin/lean -DautoImplicit=false -DrelaxedAutoImplicit=false /home/catman/CatmanCode/MetaLang/formal/MetaLang/RefinementOrder.lean -o /home/catman/CatmanCode/MetaLang/formal/.lake/build/lib/lean/MetaLang/RefinementOrder.olean -i /home/catman/CatmanCode/MetaLang/formal/.lake/build/lib/lean/MetaLang/RefinementOrder.ilean -c /home/catman/CatmanCode/MetaLang/formal/.lake/build/ir/MetaLang/RefinementOrder.c --setup /home/catman/CatmanCode/MetaLang/formal/.lake/build/ir/MetaLang/RefinementOrder.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "MetaLang/RefinementOrder.lean:59:25: unused variable `w`\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"}],
+ "inputs":
+ [["MetaLang.RefinementOrder:deps",
+   [["deps",
+     [["MetaLang/MetaLang:extraDep",
+       [["@MetaLang:extraDep", "00000000000006bb"]]],
+      ["imports",
+       [["Mathlib transitive imports (legacy)", "130733ea9fd0322a"],
+        ["Mathlib:importAllArts", "072ed6f75b76db5f"]]]]],
+    ["libs",
+     [["import dynlibs", "00000000000006bb"],
+      ["package external libraries", "00000000000006bb"],
+      ["module dynlibs", "00000000000006bb"],
+      ["module plugins", "00000000000006bb"]]]]],
+  ["Lean 4.29.0, commit 513160ea59dfd60defec325636bbc5215a8a6e7e",
+   "76ce528f9bbd32d8"],
+  ["/home/catman/CatmanCode/MetaLang/formal/MetaLang/RefinementOrder.lean",
+   "8817112f725c6472"],
+  ["options", "00000000000006bb"],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: MetaLang.RefinementOrder", "9f491719e76d26d6"],
+  ["Package.id?: (some MetaLang)", "4ccb955abe3c275e"],
+  ["Module.leanArgs: #[-DautoImplicit=false, -DrelaxedAutoImplicit=false]",
+   "05273b00ae821682"]],
+ "depHash": "0e2185d793830fd9"}

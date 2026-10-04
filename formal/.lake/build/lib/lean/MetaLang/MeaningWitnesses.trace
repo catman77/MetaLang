@@ -1,0 +1,57 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["c1659194b449ecb1.olean"],
+  "i": "2d2fa712e923c92e.ilean",
+  "c": "3bdfd22ce808e08c.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/catman/CatmanCode/SymStructures-RH/.lake/packages/Cli/.lake/build/lib/lean:/home/catman/CatmanCode/SymStructures-RH/.lake/packages/batteries/.lake/build/lib/lean:/home/catman/CatmanCode/SymStructures-RH/.lake/packages/Qq/.lake/build/lib/lean:/home/catman/CatmanCode/SymStructures-RH/.lake/packages/aesop/.lake/build/lib/lean:/home/catman/CatmanCode/SymStructures-RH/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/catman/CatmanCode/SymStructures-RH/.lake/packages/importGraph/.lake/build/lib/lean:/home/catman/CatmanCode/SymStructures-RH/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/catman/CatmanCode/SymStructures-RH/.lake/packages/plausible/.lake/build/lib/lean:/home/catman/CatmanCode/SymStructures-RH/.lake/packages/mathlib/.lake/build/lib/lean:/home/catman/CatmanCode/MetaLang/formal/.lake/build/lib/lean /home/catman/.elan/toolchains/leanprover--lean4---v4.29.0-rc8/bin/lean -DautoImplicit=false -DrelaxedAutoImplicit=false /home/catman/CatmanCode/MetaLang/formal/MetaLang/MeaningWitnesses.lean -o /home/catman/CatmanCode/MetaLang/formal/.lake/build/lib/lean/MetaLang/MeaningWitnesses.olean -i /home/catman/CatmanCode/MetaLang/formal/.lake/build/lib/lean/MetaLang/MeaningWitnesses.ilean -c /home/catman/CatmanCode/MetaLang/formal/.lake/build/ir/MetaLang/MeaningWitnesses.c --setup /home/catman/CatmanCode/MetaLang/formal/.lake/build/ir/MetaLang/MeaningWitnesses.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "MetaLang/MeaningWitnesses.lean:212:11: unused variable `y`\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"},
+  {"message":
+   "MetaLang/MeaningWitnesses.lean:280:4: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
+   "level": "warning"},
+  {"message":
+   "MetaLang/MeaningWitnesses.lean:333:20: This simp argument is unused:\n  hy\n\nHint: Omit it from the simp argument list.\n  simp ̵[̵h̵y̵]̵\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "MetaLang/MeaningWitnesses.lean:340:25: This simp argument is unused:\n  hxi\n\nHint: Omit it from the simp argument list.\n  simp [hx̵i̵,̵ ̵h̵y]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "MetaLang/MeaningWitnesses.lean:340:30: This simp argument is unused:\n  hy\n\nHint: Omit it from the simp argument list.\n  simp [hxi,̵ ̵h̵y̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"}],
+ "inputs":
+ [["MetaLang.MeaningWitnesses:deps",
+   [["deps",
+     [["MetaLang/MetaLang:extraDep",
+       [["@MetaLang:extraDep", "00000000000006bb"]]],
+      ["imports",
+       [["MetaLang.AlgebraicDescent transitive imports (legacy)",
+         "7485d0ccee843101"],
+        ["MetaLang.AlgebraicDescent:importAllArts", "56f83475fa0dbfe7"],
+        ["MetaLang.RefinementOrder transitive imports (legacy)",
+         "3ab7e3cb45061f00"],
+        ["MetaLang.RefinementOrder:importAllArts", "b094ea85958f72c0"],
+        ["Mathlib.GroupTheory.SpecificGroups.Dihedral transitive imports (legacy)",
+         "b93cd7c46a725446"],
+        ["Mathlib.GroupTheory.SpecificGroups.Dihedral:importAllArts",
+         "ef5c835979c9b3ef"]]]]],
+    ["libs",
+     [["import dynlibs", "00000000000006bb"],
+      ["package external libraries", "00000000000006bb"],
+      ["module dynlibs", "00000000000006bb"],
+      ["module plugins", "00000000000006bb"]]]]],
+  ["Lean 4.29.0, commit 513160ea59dfd60defec325636bbc5215a8a6e7e",
+   "76ce528f9bbd32d8"],
+  ["/home/catman/CatmanCode/MetaLang/formal/MetaLang/MeaningWitnesses.lean",
+   "0ddd7eff44c07d2d"],
+  ["options", "00000000000006bb"],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: MetaLang.MeaningWitnesses", "6c64bf10d6c60a1d"],
+  ["Package.id?: (some MetaLang)", "4ccb955abe3c275e"],
+  ["Module.leanArgs: #[-DautoImplicit=false, -DrelaxedAutoImplicit=false]",
+   "05273b00ae821682"]],
+ "depHash": "af6232934c525762"}

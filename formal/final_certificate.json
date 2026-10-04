@@ -1,0 +1,2088 @@
+{
+  "project": "MetaLang",
+  "date": "2026-09-11",
+  "overall_status": "proved_in_axioms",
+  "scope": "narrowed_theorem_grade_claims (M0-M6 core + M7 ASC ladder + M8 meaning algebra + M9 meaning algebra under observation)",
+  "toolchain": "leanprover/lean4:v4.29.0-rc8",
+  "mathlib_rev": "698d2b68b870f1712040ab0c233d34372d4b56df",
+  "discipline": {
+    "sorry": 0,
+    "new_axioms": 0,
+    "native_decide": false,
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "theorems": {
+    "ML-01": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.World.adm_of_precedes",
+      "claim": "admissibility is prefix-closed",
+      "source": "v0.6",
+      "downgrade": "Adm derived from a one-step Step relation, not primitive"
+    },
+    "ML-02": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.World.exists_noncommutative_world",
+      "claim": "order of distinctions is not commutative in general",
+      "source": "Desc_v1",
+      "downgrade": "existential witness, not a general non-commutativity law"
+    },
+    "ML-03": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Machine.stabilization",
+      "claim": "iterative refinement stabilizes on a finite source",
+      "source": "v0.6-v0.8"
+    },
+    "ML-04": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Machine.indist_greatest",
+      "claim": "the limit is the greatest context-congruence respecting responses",
+      "source": "v0.8"
+    },
+    "ML-05": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Machine.exists_witness_of_not_indist",
+      "claim": "semantic difference always has a finite reachable witness",
+      "source": "v0.13, v0.15"
+    },
+    "ML-06": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.not_forall_source_distinction_relevant",
+      "claim": "source distinction implies semantic distinction",
+      "source": "v0.14 FAIL",
+      "note": "encoded as a countermodel; this is the error v0.14 found"
+    },
+    "ML-07": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.not_forall_immediate_implies_semantic",
+      "claim": "immediate effect implies semantic effect",
+      "source": "v0.13, v0.15"
+    },
+    "ML-08": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Machine.indist_relabel_iff",
+      "claim": "the internal language is invariant under surface relabeling",
+      "source": "v0.38 gates S24, S25"
+    },
+    "ML-09": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.ObsFamily.etaBar_injective",
+      "claim": "the operational object embeds subdirectly into the product of observations",
+      "source": "v0.38 gates S10, S12, S13"
+    },
+    "ML-10": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.q8_d8_operationally_equivalent",
+      "claim": "Q8 and D8 are non-isomorphic, diagram-equivalent, and share the operational object V4",
+      "source": "v0.38 gates S3, S4, S7, S11, S30, S31",
+      "downgrade": "naturality formalized at object/arrow level; component isomorphisms alpha_i not formalized; equation layer S14-S18 omitted"
+    },
+    "ML-11": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.no_underdeterminationFailure",
+      "claim": "complete science determines a unique ontic source",
+      "source": "v0.38 gates S34, S35"
+    },
+    "ML-12": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.no_profileSufficiencyFailure",
+      "claim": "matching object profile suffices for diagram equivalence",
+      "source": "v0.38 gates S22, S23, S29"
+    },
+    "ML-13": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.partial_fixed_point_is_not_truth",
+      "claim": "a partial fixed point may exist where no exact solution does, and is not a truth value",
+      "source": "v0.31"
+    },
+    "ML-14": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.no_utilityFailure",
+      "claim": "semantic structure determines utility",
+      "source": "v0.3 market sign null"
+    },
+    "ML-15": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.no_channelFailure",
+      "claim": "correspondence implies a causal channel",
+      "source": "v0.3-v0.4 FTL control"
+    },
+    "ML-16": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Audit.final_audit_passes",
+      "claim": "all encoded failure modes are cleared",
+      "source": "formal/ProofAudit.md"
+    },
+    "ML-17": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Machine.sep_ultrametric",
+      "claim": "distinguishing depth is an ultrametric on the continuation quotient",
+      "source": "v0.18 gates S2, S3, S4",
+      "downgrade": "depth-valued in ENat; no MetricSpace/topology object is built"
+    },
+    "ML-18": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Machine.sep_le_sep_transport_succ",
+      "claim": "every primitive is 2-Lipschitz in the ASC scale",
+      "source": "v0.18 gate S16"
+    },
+    "ML-19": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Machine.GlobalMetric.uniformly_discrete_of_nonexpansive",
+      "claim": "global nonexpansiveness plus uniform response separation forces uniform discreteness",
+      "source": "v0.19 gates S12, S18"
+    },
+    "ML-20": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Machine.distortion_eq",
+      "claim": "the scale gap between the discrete and ASC geometries is exactly 2^depth",
+      "source": "v0.19 gates S15, S17"
+    },
+    "ML-21": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.isSynthesis_assoc",
+      "claim": "universal synthesis is idempotent, commutative and associative by its universal property",
+      "source": "v0.24 theorem 3.1, gates S6-S8"
+    },
+    "ML-22": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.order_does_not_determine_binop",
+      "claim": "continuation order determines an arbitrary binary operation",
+      "source": "v0.24 no-go section 4"
+    },
+    "ML-23": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.contrast_can_be_multivalued",
+      "claim": "contrast is antichain-valued, not point-valued",
+      "source": "v0.24 gates S14-S16"
+    },
+    "ML-24": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.rho_le_iff",
+      "claim": "a reflector into a reflective subspace is left adjoint to the inclusion",
+      "source": "v0.25 section 3",
+      "downgrade": "rho is defined by choice and is noncomputable"
+    },
+    "ML-25": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.closure_laws_do_not_determine_reflection",
+      "claim": "closure laws alone determine the unary meaning operation",
+      "source": "v0.25 no-go section 4"
+    },
+    "ML-26": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.fix_comp_iff",
+      "claim": "both composition orders have the same fixed space, the intersection",
+      "source": "v0.26 section 3"
+    },
+    "ML-27": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.comp_not_idempotent",
+      "claim": "reflectors are closed under composition",
+      "source": "v0.26 hypothesis H4"
+    },
+    "ML-28": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.exists_stable_iter",
+      "claim": "on a finite order the iterated composite saturates",
+      "source": "v0.26 hypotheses H5, H6",
+      "downgrade": "the general convergence of iter to the least joint fixed point above x is not proved; only exists_stable_iter (some fixed point is reached) and iter_le_of_fixed (the chain never overshoots) are general, together with joint_reflector_isLUB (ML-29)"
+    },
+    "ML-29": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.joint_reflector_isLUB",
+      "claim": "the joint reflector is the least upper bound in the closure-operator order",
+      "source": "v0.26 hypothesis H7"
+    },
+    "ML-30": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.B3.conditions_count",
+      "claim": "the Boolean carrier B3 has exactly 61 reflective conditions",
+      "source": "v0.27 gate S2"
+    },
+    "ML-31": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.B3.not_distributive",
+      "claim": "a Boolean semantic carrier induces a distributive logic of conditions",
+      "source": "v0.27 gates S11, S12"
+    },
+    "ML-32": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.B3.implication_multivalued",
+      "claim": "the generalized implication is always point-valued (Heyting)",
+      "source": "v0.27 implication profile",
+      "downgrade": "multivaluedness and residuation are proved on witnesses, not for all pairs"
+    },
+    "ML-33": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.Nuisance.public_behaviour_does_not_classify",
+      "claim": "public extensional behaviour classifies source admissibility",
+      "source": "v0.28 public-indistinguishability control"
+    },
+    "ML-34": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.TheorySpace.provability_fixed_admissibility_varies",
+      "claim": "provability and source admissibility are independent axes; branch counts 0, 1 and 2 all occur",
+      "source": "v0.29/v0.30 section 2",
+      "downgrade": "frozen four-mode toy model, not a formalized proof system"
+    },
+    "ML-35": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.DiagonalSystem.diagonal_lemma",
+      "claim": "with representable substitution every unary formula has a syntactic fixed point",
+      "source": "v0.30 section 1",
+      "downgrade": "axiomatized coding; the only exhibited model is degenerate"
+    },
+    "ML-36": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.no_total_truth_predicate",
+      "claim": "a total truth-correct predicate of the same language exists",
+      "source": "v0.30 section 3 (Tarski barrier)"
+    },
+    "ML-37": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Cover.eta_bijective",
+      "claim": "a complete cover with exact overlaps reconstructs the space",
+      "source": "v0.20 gates S6, S7",
+      "downgrade": "colimit as a sigma-type quotient, not a CategoryTheory coequalizer"
+    },
+    "ML-38": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.naive_dynamic_colimit_wrong",
+      "claim": "the colimit over dynamic continuation arrows equals the semantic quotient",
+      "source": "v0.20 gate S14"
+    },
+    "ML-39": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.state_cover_not_tuple_cover",
+      "claim": "a complete state cover implies coverage of operand pairs",
+      "source": "v0.23 gate 13"
+    },
+    "ML-40": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.behavioural_descent",
+      "claim": "the descent relation is inferable from behaviour alone",
+      "source": "v0.21 gates 1-2, 11"
+    },
+    "ML-41": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AuditM7.ladder_audit_passes",
+      "claim": "all encoded failure modes of the ASC ladder are cleared",
+      "source": "formal/ProofAudit.md"
+    },
+    "ML-42": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Machine.dASC_op_le_max",
+      "claim": "filtration-compatible binary operations are 1-Lipschitz for the max ASC ultrametric",
+      "source": "v0.22 S11-S13"
+    },
+    "ML-43": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Machine.descentCompat₂_of_filtrationCompat₂",
+      "claim": "filtration compatibility implies well-definedness on the semantic quotient"
+    },
+    "ML-44": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.Separation.closure_does_not_imply_descent",
+      "claim": "closure of a total operation does NOT imply descent compatibility",
+      "source": "v0.22 S16"
+    },
+    "ML-45": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.Separation.descent_does_not_imply_continuity",
+      "claim": "closure plus descent does NOT imply ASC continuity",
+      "source": "v0.22 S14"
+    },
+    "ML-46": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.BookAlgebra.book_layer_does_not_force_laws",
+      "claim": "the book's MeaningAlgebraData layer forces no associativity, commutativity or identity",
+      "source": "v0.22 theory sections 1 and 8 (no gate: this is the boundary the corpus declares, not a measured gate)",
+      "downgrade": "BookAlgebra is a restatement, not an import (downgrade 36)"
+    },
+    "ML-47": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgAtlas.pres_hom",
+      "claim": "every chart of a compatible algebraic atlas is a homomorphism into the global algebra",
+      "source": "v0.22 S9-S10",
+      "downgrade": "full presentations required (downgrade 28)"
+    },
+    "ML-48": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgAtlas.global_unique",
+      "claim": "the global meaning operations on the colimit are unique",
+      "source": "v0.22 S9-S10",
+      "downgrade": "built through a chosen base chart (downgrade 30)"
+    },
+    "ML-49": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.NoDescent.closure_without_compat_has_no_global",
+      "claim": "matching operation symbols in every chart do not define a descent",
+      "source": "v0.22 S15"
+    },
+    "ML-50": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgAtlas.law_descends",
+      "claim": "any equation of the signature valid in a chart holds in the global algebra",
+      "source": "v0.22 S17"
+    },
+    "ML-51": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.ProductAtlas.glue_unique",
+      "claim": "tuple coverage plus overlap compatibility give a unique global binary operation",
+      "source": "v0.23 S5-S8"
+    },
+    "ML-52": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.ProductCounter.corrupt_overlap_no_global",
+      "claim": "corrupting one overlap destroys well-definedness of the glued operation",
+      "source": "v0.23 S14"
+    },
+    "ML-53": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.ProductCounter.output_leaves_charts",
+      "claim": "local operation outputs leave both operand charts: charts need not be subalgebras",
+      "source": "v0.23 S16"
+    },
+    "ML-54": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Witnesses.shift_approx",
+      "claim": "the shift machine's semantic filtration coincides with prefix agreement"
+    },
+    "ML-55": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Witnesses.shift_not_discrete",
+      "claim": "the infinite witness is non-discrete: at every depth distinct states remain unseparated",
+      "source": "v0.24 S21",
+      "downgrade": "filtration form, not profinite topology (downgrade 33)"
+    },
+    "ML-56": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Witnesses.GroupWitness.gplus_not_comm with gplus_assoc, gminus_self, gminus_gplus, grho_involutive, grho_hom, group_ops_continuous",
+      "claim": "a nonabelian ASC-continuous meaning algebra exists, with cancellation and an involutive rho automorphism",
+      "source": "v0.22 S18 S20 S21; v0.23 S18 S19 S21",
+      "downgrade": "noncommutativity witnessed on D4 only (downgrade 35)"
+    },
+    "ML-57": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.Witnesses.MagmaWitness.asc_does_not_force_group_laws",
+      "claim": "ASC topology plus descent do NOT force associativity or an identity",
+      "source": "v0.22 S19 S22; v0.23 S20"
+    },
+    "ML-58": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Witnesses.BooleanWitness.bjoin_isLUB",
+      "claim": "in the infinite Boolean witness, coordinatewise OR is the least upper bound of the refinement order",
+      "source": "v0.24 S18",
+      "downgrade": "the IsLUB half uses the Pi order; the order-from-behaviour half is ML-66 (downgrade 37)"
+    },
+    "ML-59": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Witnesses.BooleanWitness.bdiff_isLeast",
+      "claim": "relative complement is the least augmentation reaching x from y",
+      "source": "v0.24 S19"
+    },
+    "ML-60": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Witnesses.BooleanWitness.boolean_ops_continuous",
+      "claim": "both derived operations of the infinite witness are ASC-continuous",
+      "source": "v0.24 S20"
+    },
+    "ML-61": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.RefinementInterface.refines_iff_le",
+      "claim": "the refinement order is recovered from the continuation path language alone, without state labels",
+      "source": "v0.24 S1 S2"
+    },
+    "ML-62": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.boolean_contrast_singleton",
+      "claim": "in a Boolean algebra the contrast antichain degenerates to the singleton {x \\\\ y}",
+      "source": "v0.24 S13"
+    },
+    "ML-63": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.bow_no_synthesis",
+      "claim": "universal synthesis is partial: a pair may have two incomparable minimal upper bounds",
+      "source": "v0.24 S9 S10"
+    },
+    "ML-64": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AuditM8.algebra_audit_passes",
+      "claim": "all encoded failure modes of the meaning algebra are cleared",
+      "source": "formal/ProofAudit.md"
+    },
+    "ML-65": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.UnaryAtlas.glue_unique",
+      "claim": "a unary meaning operation globalizes uniquely from a cover of the state space",
+      "source": "v0.23 S9"
+    },
+    "ML-66": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Witnesses.BooleanWitness.bool_refines_iff_le",
+      "claim": "in the infinite Boolean witness the constraint order is recovered from the continuation language of the a_i primitives",
+      "source": "v0.24 S1 S2 S18",
+      "downgrade": "the order comes from boolSys while the filtration comes from shiftMachine: two continuation presentations of one carrier (downgrade 37)"
+    },
+    "ML-67": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Projection.descends_iff_congruence",
+      "claim": "a quotient operation exists iff the projection kernel is a congruence",
+      "source": "v0.32 S18"
+    },
+    "ML-68": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.Nuisance.nuisance_breaks_congruence",
+      "claim": "an operation depending on a hidden coordinate has no commuting descent square",
+      "source": "v0.32 S20 S21"
+    },
+    "ML-69": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Nuisance.good_quotient_is_and",
+      "claim": "a projection that removes only nuisance preserves the algebra",
+      "source": "v0.32 S25"
+    },
+    "ML-70": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Projection.assoc_descends",
+      "claim": "associativity of the source holds in every admissible projection",
+      "source": "v0.32 S19; v0.33 S5"
+    },
+    "ML-71": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Projection.congruence_iff_descentCompat",
+      "claim": "kernel congruence for the canonical semantic projection is exactly requirement (2) of v0.22 section 8"
+    },
+    "ML-72": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.holdsW_of_holdsS",
+      "claim": "every equational law of the source holds in every observer world",
+      "source": "v0.33 S5"
+    },
+    "ML-73": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.joint_reconstruction",
+      "claim": "a jointly faithful observer family recovers the equational theory of the source, in both directions",
+      "source": "v0.33 S7",
+      "downgrade": "observers are postulated surjective homomorphisms (downgrade 38)"
+    },
+    "ML-74": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.ShadowWitness.commutativity_is_a_shadow",
+      "claim": "commutativity can hold in every observer world and fail in the source: the sign projection S3 -> Bool",
+      "source": "v0.33 S8; v0.34 S2",
+      "downgrade": "witness is S3 -> Bool rather than S3 x C2 (downgrade 42)"
+    },
+    "ML-75": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.shadow_implies_not_faithful",
+      "claim": "a coherent shadow law is possible only for a family that is not jointly faithful",
+      "source": "v0.33 S11"
+    },
+    "ML-76": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.ShadowWitness.active_refutes_shadow",
+      "claim": "adding a separating observer falsifies the shadow law",
+      "source": "v0.34 S21"
+    },
+    "ML-77": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.ShadowWitness.exhaustion_is_not_completeness",
+      "claim": "passing an equation on every current observer does not certify observer-class completeness",
+      "source": "v0.34 section 6"
+    },
+    "ML-78": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.scopedOn_antitone",
+      "claim": "the set of universally true laws can only shrink when an observer is added",
+      "source": "v0.34 section 4"
+    },
+    "ML-79": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.exists_refining_observer",
+      "claim": "with a jointly faithful accessible class, any nontrivial blind remainder is split by some observer",
+      "source": "v0.34 S21"
+    },
+    "ML-80": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.zero_gain_of_equivalent",
+      "claim": "repeating an operationally equivalent projection has zero information gain",
+      "source": "v0.34 S2"
+    },
+    "ML-81": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.no_infinite_strict_refinement",
+      "claim": "on a finite carrier there is no infinite chain of strict refinements of the blind relation",
+      "source": "v0.34 section 3",
+      "downgrade": "stated as absence of an infinite descending chain, not as a step bound (downgrade 40)"
+    },
+    "ML-82": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.toOp_hom",
+      "claim": "the operational object inherits the source operations; the canonical projection is a homomorphism",
+      "source": "v0.35 S20; v0.36 S28"
+    },
+    "ML-83": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.opSig_assoc",
+      "claim": "the operational object preserves associativity of the source",
+      "source": "v0.35 S21; v0.36 S29"
+    },
+    "ML-84": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.holdsOp_iff_forall_holdsW",
+      "claim": "the equational theory of S_op equals the common equational theory of all observers",
+      "source": "v0.37 S11; v0.38 S15",
+      "downgrade": "the observation class is an index type, not frozen intrinsically (downgrade 39)"
+    },
+    "ML-85": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.ShadowWitness.opObject_commutative_source_not",
+      "claim": "observers reconstruct S_op, not S: an equation can hold in S_op and fail in the source",
+      "source": "v0.38 S40"
+    },
+    "ML-86": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.RefinementInterface.run_idempotent",
+      "claim": "the refinement continuation primitive is idempotent",
+      "source": "v0.18 S5; v0.19 S2; v0.20 S1"
+    },
+    "ML-87": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Witnesses.InfiniteReflection.refl_idempotent",
+      "claim": "reflection into a coordinate-defined subspace is idempotent on an infinite Boolean carrier",
+      "source": "v0.25 S17"
+    },
+    "ML-88": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AuditM9.projection_audit_passes",
+      "claim": "all encoded failure modes of the algebra under observation are cleared",
+      "source": "formal/ProofAudit.md"
+    },
+    "ML-89": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.GaugeAtlas.g_cocycle",
+      "claim": "chart transitions of a gauge atlas satisfy the cocycle law as maps, not as equalities of points",
+      "source": "v0.22 S6"
+    },
+    "ML-90": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.GaugeAtlas.g_hom",
+      "claim": "every chart transition is a homomorphism of the meaning signature",
+      "source": "v0.22 S7"
+    },
+    "ML-91": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Globalized.gplus_continuous_after_globalization",
+      "claim": "the synthesis glued from partial charts is ASC-continuous",
+      "source": "v0.23 S10"
+    },
+    "ML-92": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Globalized.gminus_continuous_after_globalization",
+      "claim": "the contrast glued from partial charts is ASC-continuous",
+      "source": "v0.23 S11"
+    },
+    "ML-93": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Globalized.grho_continuous_after_globalization",
+      "claim": "the reflection glued from a state cover is ASC-continuous",
+      "source": "v0.23 S12"
+    },
+    "ML-94": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.RefinementInterface.isSynthesis_iff_paths",
+      "claim": "universal synthesis is characterised purely by continuation-language inclusion, with no source operation",
+      "source": "v0.24 S3"
+    },
+    "ML-95": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.isSynthesis_orderIso",
+      "claim": "independent observers recover the same synthesis: it is invariant under any order isomorphism",
+      "source": "v0.24 S4"
+    },
+    "ML-96": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.contrast_orderIso",
+      "claim": "independent observers recover the same contrast antichain",
+      "source": "v0.24 S12"
+    },
+    "ML-97": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.lattice_total_synthesis",
+      "claim": "on a lattice universal synthesis is total",
+      "source": "v0.24 S5"
+    },
+    "ML-98": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.contrast_nonempty",
+      "claim": "on a finite lattice the contrast antichain is never empty",
+      "source": "v0.24 S11"
+    },
+    "ML-99": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.binop_not_identified_by_order",
+      "claim": "totality plus monotonicity in the product order do not identify a binary operation",
+      "source": "v0.24 S17"
+    },
+    "ML-100": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AuditBacklog.m12_audit_passes",
+      "claim": "all encoded failure modes of milestone M12 are cleared",
+      "source": "formal/ProofAudit.md"
+    },
+    "ML-101": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Machine.SingleGenerator.indist_iff_approx_one",
+      "claim": "with a single idempotent generator the refinement collapses at depth one",
+      "source": "v0.18 S6; v0.19 S3"
+    },
+    "ML-102": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Multiscale.exists_sep_eq",
+      "claim": "every depth carries an activation witness: for each n a pair separated exactly at depth n",
+      "source": "v0.18 S9; v0.19 S9"
+    },
+    "ML-103": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Expansion.approx_full_imp_base",
+      "claim": "grammar expansion refines the continuation topology",
+      "source": "v0.18 S11"
+    },
+    "ML-104": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.GrammarWitness.full_separates_zero_one",
+      "claim": "the refinement can be strict: a pair collapsed by the old grammar is separated by the new one",
+      "source": "v0.18 S12"
+    },
+    "ML-105": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.GrammarWitness.intermediate_nontrivial",
+      "claim": "the intermediate topology is nontrivial",
+      "source": "v0.18 S13"
+    },
+    "ML-106": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Spectator.spectator_collapsed",
+      "claim": "spectator coordinates are semantically coequalized",
+      "source": "v0.18 S14; v0.21 S8"
+    },
+    "ML-107": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Machine.dASC_step_le",
+      "claim": "every ASC primitive is at most 2-Lipschitz",
+      "source": "v0.19 S4"
+    },
+    "ML-108": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Machine.dASC_transport_le",
+      "claim": "transport by a word of length k stretches the continuation distance by at most 2^k",
+      "source": "v0.19 S6"
+    },
+    "ML-109": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Multiscale.scales_separate",
+      "claim": "the ASC scale decreases without bound while the behavioural scale stays at one",
+      "source": "v0.19 S13; v0.19 S14",
+      "downgrade": "filtration form of the Cantor witness (downgrade 33)"
+    },
+    "ML-110": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.CoverWitness.overlap_nonempty with exclusive_regions",
+      "claim": "a cover with nonempty overlap and an exclusive region in each chart exists",
+      "source": "v0.20 S3; v0.20 S4"
+    },
+    "ML-111": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Subchart.approx_iff",
+      "claim": "the local filtration of a transition-closed chart glues to the global ASC filtration",
+      "source": "v0.20 S8; v0.21 S3; v0.21 S4"
+    },
+    "ML-112": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Subchart.sep_eq",
+      "claim": "distinguishing depth is preserved under gluing",
+      "source": "v0.20 S9; v0.21 S5; v0.21 S6"
+    },
+    "ML-113": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Expansion.approx_base_imp_full",
+      "claim": "adding a synonymous continuation does not refine the topology",
+      "source": "v0.20 S10; v0.21 S7"
+    },
+    "ML-114": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.incomplete_cover_not_surjective",
+      "claim": "incomplete chart coverage breaks reconstruction",
+      "source": "v0.20 S12; v0.21 S15"
+    },
+    "ML-115": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Machine.indist_from_charts",
+      "claim": "behavioural descent reconstructs the semantic quotient from local charts alone, with no reference to a known global Q",
+      "source": "v0.21 S1; v0.21 S2"
+    },
+    "ML-116": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Machine.approx_from_charts",
+      "claim": "the local filtration reconstructs the ASC filtration",
+      "source": "v0.21 S3; v0.21 S4"
+    },
+    "ML-117": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Machine.sep_from_charts",
+      "claim": "the depth geometry is preserved by reconstruction",
+      "source": "v0.21 S5; v0.21 S6"
+    },
+    "ML-118": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.DescentDepth.one_round_insufficient",
+      "claim": "one round of refinement is not enough: depth-1 agreement does not imply semantic identity",
+      "source": "v0.21 S12"
+    },
+    "ML-119": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.DescentDepth.response_only_breaks_descent",
+      "claim": "response-only agreement breaks descent",
+      "source": "v0.21 S13"
+    },
+    "ML-120": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.DescentDepth.unaligned_interface_breaks_descent",
+      "claim": "an interface map that does not preserve responses cannot serve as a descent identification",
+      "source": "v0.21 S14"
+    },
+    "ML-121": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.descent_relation_is_forced",
+      "claim": "a false identity witness breaks reconstruction: the descent relation is forced",
+      "source": "v0.21 S16"
+    },
+    "ML-122": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Machine.stabilization",
+      "claim": "the stabilization depth is recovered on a finite carrier",
+      "source": "v0.21 S11"
+    },
+    "ML-123": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Witnesses.shift_indist_iff",
+      "claim": "on the infinite prefix witness stable behaviour separates points exactly",
+      "source": "v0.21 S17; v0.21 S19"
+    },
+    "ML-124": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Witnesses.shift_approx",
+      "claim": "the Cantor ASC filtration is exactly prefix agreement",
+      "source": "v0.21 S18"
+    },
+    "ML-125": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Witnesses.shift_not_discrete",
+      "claim": "finite depth is a negative control: at every depth distinct points remain unseparated",
+      "source": "v0.21 S20"
+    },
+    "ML-126": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AuditBacklog.m11_audit_passes",
+      "claim": "all encoded failure modes of milestone M11 are cleared",
+      "source": "formal/ProofAudit.md"
+    },
+    "ML-127": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Machine.indist_congr",
+      "claim": "the inferred stable behaviour relation is a congruence",
+      "source": "v0.21 S9"
+    },
+    "ML-128": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.isReflectionAt_iff_paths",
+      "claim": "the reflection relation is recovered from continuation behaviour plus the target subspace",
+      "source": "v0.25 S1; v0.25 S2"
+    },
+    "ML-129": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.rho_mem with le_rho, rho_monotone, rho_idem, rho_fix_iff, rho_galoisConnection",
+      "claim": "a reflective family has point-valued rho; it is inflationary, monotone, idempotent, its fixed points are exactly F, and it is left adjoint to the inclusion",
+      "source": "v0.25 S3 S4 S5 S6 S7 S8"
+    },
+    "ML-130": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.principal_isReflectionAt",
+      "claim": "principal reflection equals the join with the generator",
+      "source": "v0.25 S9"
+    },
+    "ML-131": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.rho_preserves_synthesis",
+      "claim": "reflection preserves universal synthesis",
+      "source": "v0.25 S10"
+    },
+    "ML-132": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.NonReflective.ref_bot_antichain",
+      "claim": "a non-reflective family forces a multivalued reflection: the canonical type is an antichain",
+      "source": "v0.25 S11; v0.25 S12"
+    },
+    "ML-133": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.NonReflective.forced_choice_breaks_adjunction",
+      "claim": "forcing a single point out of the antichain destroys the adjunction",
+      "source": "v0.25 S13"
+    },
+    "ML-134": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.closure_laws_do_not_determine_reflection",
+      "claim": "closure axioms alone do not identify rho: the target subspace F is necessary",
+      "source": "v0.25 S14; v0.25 S21"
+    },
+    "ML-135": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Witnesses.InfiniteReflection.refl_inflationary",
+      "claim": "the infinite Boolean reflection is inflationary and monotone",
+      "source": "v0.25 S15; v0.25 S16"
+    },
+    "ML-136": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Witnesses.InfiniteReflection.fix_eq_target",
+      "claim": "the fixed space of the infinite Boolean reflection is exactly the target subspace",
+      "source": "v0.25 S18"
+    },
+    "ML-137": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.InfiniteReflectionASC.refl_filtrationCompat",
+      "claim": "the infinite Boolean reflection is ASC 1-Lipschitz",
+      "source": "v0.25 S19"
+    },
+    "ML-138": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AuditBacklog.m13a_audit_passes",
+      "claim": "all encoded failure modes of milestone M13a are cleared",
+      "source": "formal/ProofAudit.md"
+    },
+    "ML-139": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.principalClosure",
+      "claim": "the principal primitive is a reflector: joining a generator is a closure operator",
+      "source": "v0.26 S1"
+    },
+    "ML-140": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.fix_comp_iff",
+      "claim": "the joint reflector is reconstructed from the intersection of the fixed spaces, and satisfies the reflection laws",
+      "source": "v0.26 S2; v0.26 S3"
+    },
+    "ML-141": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.joint_reflector_isLUB",
+      "claim": "the joint reflector is the least upper bound of both reflectors",
+      "source": "v0.26 S4"
+    },
+    "ML-142": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.independent_commute",
+      "claim": "source independence implies commutation of the reflectors",
+      "source": "v0.26 S6"
+    },
+    "ML-143": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.independent_comp_idempotent",
+      "claim": "commuting independent reflectors compose to a joint reflection",
+      "source": "v0.26 S7; v0.26 S9"
+    },
+    "ML-144": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.commute_without_independence",
+      "claim": "independence is not necessary for commutation",
+      "source": "v0.26 S8"
+    },
+    "ML-145": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.ops_not_commute",
+      "claim": "closure axioms do not force commutation, and noncommutation shows up as order-sensitive states",
+      "source": "v0.26 S10; v0.26 S11"
+    },
+    "ML-146": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.other_comp_idempotent",
+      "claim": "a directed chain has one good and one bad one-pass order",
+      "source": "v0.26 S12"
+    },
+    "ML-147": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.comp_not_idempotent",
+      "claim": "the bad order is not itself a reflector, and reflectors are not closed under raw composition",
+      "source": "v0.26 S13; v0.26 S15"
+    },
+    "ML-148": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.Feedback.neither_order_is_joint",
+      "claim": "a feedback pair exists for which neither one-pass order is the joint reflector",
+      "source": "v0.26 S14",
+      "downgrade": "witness is the Fin 5 chain; the Fin 4 pair of ReflectorAlgebra has a good order"
+    },
+    "ML-149": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Feedback.saturation_both_orders",
+      "claim": "finite saturation recovers the joint reflector in both orders, and the saturated result is order-independent",
+      "source": "v0.26 S16; v0.26 S17"
+    },
+    "ML-150": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.Feedback.iteration_needed",
+      "claim": "noncommuting cases genuinely need iteration: one pass is not enough",
+      "source": "v0.26 S18"
+    },
+    "ML-151": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.InfiniteJoint.joint_target",
+      "claim": "on the infinite witness the composition of reflections is the reflector into the intersection of the target subspaces",
+      "source": "v0.26 S21"
+    },
+    "ML-152": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.InfiniteJoint.comp_filtrationCompat",
+      "claim": "the composed infinite reflections are ASC prefix continuous",
+      "source": "v0.26 S22"
+    },
+    "ML-153": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AuditBacklog.m13b_audit_passes",
+      "claim": "all encoded failure modes of milestone M13b are cleared",
+      "source": "formal/ProofAudit.md"
+    },
+    "ML-154": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.entails_iff_reverse_order",
+      "claim": "entailment of conditions is exactly the reversed pointwise order of reflectors",
+      "source": "v0.27 S9"
+    },
+    "ML-155": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.absorption_of_closure",
+      "claim": "absorption holds for the hull disjunction; with conj_assoc and conj_comm this gives the lattice laws of conditions",
+      "source": "v0.27 S7"
+    },
+    "ML-156": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.joint_reflector_isLUB",
+      "claim": "conjunction of conditions is the universal intersection: the joint reflector is the greatest lower bound in entailment order",
+      "source": "v0.27 S5"
+    },
+    "ML-157": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.DiamondLogic.impAntichain_multivalued",
+      "claim": "internal implication is not generally single-valued",
+      "source": "v0.27 S15"
+    },
+    "ML-158": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.DiamondLogic.negation_multivalued",
+      "claim": "negation is not generally single-valued",
+      "source": "v0.27 S16"
+    },
+    "ML-159": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.impAntichain_complete",
+      "claim": "the implication antichain is a complete generalized residual on a finite lattice",
+      "source": "v0.27 S17"
+    },
+    "ML-160": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.residuation_of_singleton",
+      "claim": "when the implication antichain is a singleton, exact residuation holds",
+      "source": "v0.27 S18"
+    },
+    "ML-161": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.Feedback.orders_differ",
+      "claim": "process composition can remain noncommutative, and raw composition can leave the reflector class",
+      "source": "v0.27 S19; v0.27 S20"
+    },
+    "ML-162": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Feedback.saturation_both_orders",
+      "claim": "logical conjunction is order-independent after saturation",
+      "source": "v0.27 S21"
+    },
+    "ML-163": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.RefinementInterface.refines_iff_le",
+      "claim": "the continuation order is recovered by either observer, independently of surface labels",
+      "source": "v0.27 S1; v0.28 S1"
+    },
+    "ML-164": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AuditBacklog.m13c_audit_passes",
+      "claim": "all encoded failure modes of milestone M13c are cleared",
+      "source": "formal/ProofAudit.md"
+    },
+    "ML-165": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.B3.not_modular",
+      "claim": "the Boolean carrier B3 induces a non-modular condition logic; witness 130, 132, 131",
+      "source": "v0.27 S13"
+    },
+    "ML-166": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.m3_not_distributive",
+      "claim": "the diamond M3 is non-distributive",
+      "source": "v0.27 S14"
+    },
+    "ML-167": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.n5_not_distributive",
+      "claim": "the pentagon N5 is non-distributive, and additionally non-modular",
+      "source": "v0.27 S14"
+    },
+    "ML-168": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.linear_union_isMooreSet",
+      "claim": "on a linear carrier the disjunction of conditions is plain union: no hull is needed and the condition logic is distributive",
+      "source": "v0.27 S10"
+    },
+    "ML-169": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AuditBacklog.m13d_partial_audit_passes",
+      "claim": "the encoded failure modes of the closed part of milestone M13d are cleared",
+      "source": "formal/ProofAudit.md"
+    },
+    "ML-170": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.closure_sup_closure",
+      "claim": "deductive closure depends only on the semantic theory, not on the presentation",
+      "source": "v0.29 S3"
+    },
+    "ML-171": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.extension_descends",
+      "claim": "axiom extension descends through the presentation quotient",
+      "source": "v0.29 S4"
+    },
+    "ML-172": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.multiple_presentations",
+      "claim": "one theory has several distinct syntactic presentations",
+      "source": "v0.29 S1; v0.29 S9"
+    },
+    "ML-173": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.exists_infIrred_separating",
+      "claim": "on a finite lattice a separating meet-irreducible always exists",
+      "source": "v0.29 S5"
+    },
+    "ML-174": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.eq_of_irredSignature_eq",
+      "claim": "the irreducible-consequence signature uniquely identifies a theory; it is canonical, not a choice of one minimum basis",
+      "source": "v0.29 S6; v0.29 S8"
+    },
+    "ML-175": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.TheorySpace.branch_profile",
+      "claim": "the source grammar yields exactly the 2/1/1/0 admissible branch profile; the same internal proof status supports branch counts 0, 1 and 2",
+      "source": "v0.29 S12; v0.29 S18; v0.30 S12"
+    },
+    "ML-176": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.TheorySpace.prov_ne_adm",
+      "claim": "formal undecidability and source branching are separate axes: provability and admissibility differ",
+      "source": "v0.29 S21; v0.30 S13; v0.30 S21"
+    },
+    "ML-177": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.DiagonalSystem.diagonal_lemma",
+      "claim": "the diagonal construction produces an exact fixed point mechanically, and self-reference alone is not a contradiction",
+      "source": "v0.30 S2; v0.30 S3; v0.30 S4; v0.30 S6"
+    },
+    "ML-178": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.no_total_truth_predicate",
+      "claim": "a same-level total truth predicate is inconsistent; renaming admissibility does not produce one",
+      "source": "v0.30 S5; v0.30 S23; v0.30 S26"
+    },
+    "ML-179": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Partial.outcome_is_branch_set",
+      "claim": "the admissibility outcome is typed as a branch set, not a Boolean truth value",
+      "source": "v0.31 S2; v0.31 S14"
+    },
+    "ML-180": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.istep_mono",
+      "claim": "the best interval lift is monotone in the knowledge order",
+      "source": "v0.31 S4"
+    },
+    "ML-181": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Partial.exact_mem_gamma_istep",
+      "claim": "the interval lift is sound: every exact fixed point stays inside the partial status",
+      "source": "v0.31 S6"
+    },
+    "ML-182": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.liar_no_exact_fixed",
+      "claim": "an exact self-consistent solution need not exist; the liar complement has none",
+      "source": "v0.31 S8; v0.31 S10"
+    },
+    "ML-183": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.liar_interval_fixed",
+      "claim": "the liar complement has a canonical fully unknown partial fixed point, and the partial status absorbs it",
+      "source": "v0.31 S11; v0.30 S7"
+    },
+    "ML-184": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.idPhi_all_fixed",
+      "claim": "identity self-reference has four exact solutions",
+      "source": "v0.31 S12"
+    },
+    "ML-185": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.Partial.bifurcation_indistinguishable_from_unknown",
+      "claim": "partiality does not classify the reason for uncertainty: zero and two exact solutions give the same fully unknown status",
+      "source": "v0.31 S13; v0.31 S25"
+    },
+    "ML-186": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.Partial.no_equivariant_tiebreak",
+      "claim": "no equivariant singleton tiebreak exists for a symmetric two-branch unknown",
+      "source": "v0.31 S17"
+    },
+    "ML-187": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.partial_fixed_point_is_not_truth",
+      "claim": "a partial fixed point is a sound information object, not identified with truth",
+      "source": "v0.31 S22; v0.31 S23"
+    },
+    "ML-188": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Partial.empty_ne_unknown",
+      "claim": "an empty admissible set is distinct from an unresolved full interval",
+      "source": "v0.31 S24"
+    },
+    "ML-189": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AuditBacklog.m14_partial_audit_passes",
+      "claim": "the encoded failure modes of the closed part of milestone M14 are cleared",
+      "source": "formal/ProofAudit.md"
+    },
+    "ML-190": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.TheorySpace.branch_profile",
+      "claim": "the four source modes behave exactly as the corpus states: bifurcated has two minimal admissible extensions, each resolved mode selects only its own, and the blocked mode admits neither binary extension",
+      "source": "v0.29 S14 S15 S16 S17 S20; v0.30 S14 S15 S16 S17"
+    },
+    "ML-191": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.TheorySpace.provability_fixed_admissibility_varies",
+      "claim": "the internal provability status is held fixed across all source modes while admissibility varies: the current theory formally decides neither branch",
+      "source": "v0.29 S10; v0.29 S11; v0.30 S11"
+    },
+    "ML-192": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Boundary.boundaryOf",
+      "claim": "the boundary object carries both layers: the partial interval and the recurrence metadata",
+      "source": "v0.32 S1"
+    },
+    "ML-193": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Boundary.five_modes_distinct",
+      "claim": "the frozen boundary modes are classified exactly by the signature (number of solutions, number of points on obstruction cycles)",
+      "source": "v0.32 S2"
+    },
+    "ML-194": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.Boundary.liar_mode",
+      "claim": "the liar has no exact fixed point but a nontrivial recurrence",
+      "source": "v0.32 S3"
+    },
+    "ML-195": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Boundary.identity_mode",
+      "claim": "identity self-reference has four exact fixed points and no nontrivial recurrence",
+      "source": "v0.32 S4"
+    },
+    "ML-196": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.Boundary.hidden_mode",
+      "claim": "a unique solution can be hidden by a nontrivial recurrence",
+      "source": "v0.32 S5"
+    },
+    "ML-197": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.Boundary.bifurcated_mode",
+      "claim": "multiple exact solutions can coexist with a recurrent obstruction",
+      "source": "v0.32 S6"
+    },
+    "ML-198": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Partial.empty_ne_unknown",
+      "claim": "a blocked empty exact status is distinct from the fully unknown interval",
+      "source": "v0.32 S7"
+    },
+    "ML-199": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Boundary.resolved_ne_unknown",
+      "claim": "a resolved singleton status is distinct from the fully unknown interval",
+      "source": "v0.32 S8"
+    },
+    "ML-200": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Boundary.boundary_fix_card",
+      "claim": "the recurrence layer recovers the multiplicity of exact fixed points",
+      "source": "v0.32 S11"
+    },
+    "ML-201": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.Boundary.unknown_has_distinct_causes",
+      "claim": "full unknown has several distinct cause signatures: the obstruction layer does not identify 'no solution' with 'many solutions', and the two layers are logically distinct",
+      "source": "v0.32 S12; v0.32 S15; v0.32 S16"
+    },
+    "ML-202": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Boundary.exact_iff_one_cycle",
+      "claim": "the exact solution set is read from the one-cycles, not inferred from the partial status",
+      "source": "v0.32 S28"
+    },
+    "ML-203": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Boundary.cycle_not_solution",
+      "claim": "nontrivial cycles are explicit obstruction witnesses, not truth values",
+      "source": "v0.32 S29"
+    },
+    "ML-204": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Nuisance.good_descends",
+      "claim": "a positive projection kernel is a congruence, so the quotient operation exists",
+      "source": "v0.32 S17"
+    },
+    "ML-205": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.Nuisance.nuisance_breaks_congruence",
+      "claim": "every negative projection has an explicit congruence-violation witness; equational laws are preserved by valid quotients and not by arbitrary projections",
+      "source": "v0.32 S22; v0.32 S24"
+    },
+    "ML-206": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Projection.congruence_of_descends",
+      "claim": "observable structure must be projection-invariant for the effectiveness reading to apply: the commuting square forces the kernel to be a congruence",
+      "source": "v0.32 S26"
+    },
+    "ML-207": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AuditBacklog.m15_audit_passes",
+      "claim": "all encoded failure modes of milestone M15 are cleared",
+      "source": "formal/ProofAudit.md"
+    },
+    "ML-208": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.ShadowWitness.multiple_false_equations",
+      "claim": "a non-faithful family carries several distinct false source equations, all exact in every shadow",
+      "source": "v0.33 S9"
+    },
+    "ML-209": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.ShadowWitness.sq_scoped",
+      "claim": "the exponent-2 law is an exact effective law on the elementary-2 observer class while failing in the source",
+      "source": "v0.33 S10"
+    },
+    "ML-210": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.ShadowWitness.shadowFamily_not_faithful",
+      "claim": "the abelianizing shadow family is not jointly faithful",
+      "source": "v0.33 S4"
+    },
+    "ML-211": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.joint_reconstruction",
+      "claim": "the generated equational grammar obeys the joint-faithful converse: a source law is recoverable as the intersection of jointly faithful observer laws",
+      "source": "v0.33 S6; v0.33 S13; v0.33 S32"
+    },
+    "ML-212": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.ShadowWitness.commutativity_is_a_shadow",
+      "claim": "projection can create new effective equations not true in the source; stability in a restricted class does not make them fundamental",
+      "source": "v0.33 S14; v0.33 S15; v0.33 S28; v0.33 S29"
+    },
+    "ML-213": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.shadow_implies_not_faithful",
+      "claim": "a fundamental class requires source access or joint-faithful invariance; completeness of observers, not repetition, is what certifies it",
+      "source": "v0.33 S12; v0.33 S20"
+    },
+    "ML-214": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.holdsW_of_holdsS",
+      "claim": "mathematical effectiveness under projection is explained by descent of source equations",
+      "source": "v0.33 S27"
+    },
+    "ML-215": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.ShadowWitness.repeated_blind_nontrivial",
+      "claim": "the starting observer family has a nontrivial blind relation",
+      "source": "v0.34 S1"
+    },
+    "ML-216": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.ShadowWitness.multiple_false_equations",
+      "claim": "the starting family supports several false universal equations",
+      "source": "v0.34 S3"
+    },
+    "ML-217": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.Blind",
+      "claim": "the blind relation is by definition the intersection of the observer equivalences",
+      "source": "v0.34 S4"
+    },
+    "ML-218": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.unresolved_ssubset",
+      "claim": "a fundamental experiment is exactly a strict refinement of the blind relation; the decisive observer is structurally kernel-splitting",
+      "source": "v0.34 S5; v0.34 S11"
+    },
+    "ML-219": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.exists_refining_observer",
+      "claim": "the active strategy uses partition split gain, not the truth of a target law; every step before completion has positive gain, relative to the current family and candidate access",
+      "source": "v0.34 S6; v0.34 S19; v0.34 S33"
+    },
+    "ML-220": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.ShadowWitness.repeated_keeps_shadow",
+      "claim": "repetition does not remove false universal laws",
+      "source": "v0.34 S13"
+    },
+    "ML-221": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.ShadowWitness.repeated_not_faithful",
+      "claim": "repetition never makes a family jointly faithful",
+      "source": "v0.34 S14"
+    },
+    "ML-222": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.no_infinite_strict_refinement",
+      "claim": "any policy adding positive-gain observers reaches faithfulness in finitely many steps on a finite carrier",
+      "source": "v0.34 S15"
+    },
+    "ML-223": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.unresolved_antitone",
+      "claim": "the blind pair count is monotone non-increasing",
+      "source": "v0.34 S18"
+    },
+    "ML-224": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.scopedOn_antitone",
+      "claim": "the count of false universal laws is monotone non-increasing when observers are added",
+      "source": "v0.34 S20"
+    },
+    "ML-225": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.joint_reconstruction",
+      "claim": "joint faithfulness is a structural certificate, not an empirical repeat count; faithful families have zero false source equations",
+      "source": "v0.34 S23; v0.34 S24"
+    },
+    "ML-226": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.ShadowWitness.commutativity_is_a_shadow",
+      "claim": "non-faithful families can support false universal source claims",
+      "source": "v0.34 S25"
+    },
+    "ML-227": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.ShadowWitness.zero_false_positives_does_not_certify",
+      "claim": "zero observed false positives on a finite grammar does not certify joint faithfulness",
+      "source": "v0.34 S26; v0.34 S27"
+    },
+    "ML-228": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.zero_gain_of_equivalent",
+      "claim": "the progress measure separates precision inside the shadow from a new observer dimension: an equivalent observer gives zero blind gain, so effective science can improve without reducing the blind kernel",
+      "source": "v0.34 S28; v0.34 S29"
+    },
+    "ML-229": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.ShadowWitness.activeFamily_faithful",
+      "claim": "the active search closes the frozen source with one structurally novel measurement",
+      "source": "v0.34 S34"
+    },
+    "ML-230": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AuditBacklog.m16b_audit_passes",
+      "claim": "all encoded failure modes of milestone M16.2 are cleared",
+      "source": "formal/ProofAudit.md"
+    },
+    "ML-231": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.opO_hom",
+      "claim": "the observer-category arrows are well-defined homomorphisms of the meaning signature",
+      "source": "v0.37 S3"
+    },
+    "ML-232": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.opO_toOp",
+      "claim": "the observer-category quotient triangles commute: each observer factors through the operational object",
+      "source": "v0.37 S4"
+    },
+    "ML-233": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Sig.Hom.comp",
+      "claim": "composition in the observer category is exact: homomorphisms compose to homomorphisms",
+      "source": "v0.37 S5"
+    },
+    "ML-234": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.opO_surjective",
+      "claim": "all observer transition maps are surjective",
+      "source": "v0.37 S6"
+    },
+    "ML-235": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.ker_eq_obsFamily_ker",
+      "claim": "the evaluation kernel equals the intersection of all observer kernels, and the operational object is defined in one step as source modulo that kernel",
+      "source": "v0.37 S7; v0.37 S26; v0.37 S28"
+    },
+    "ML-236": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.evalProd_injective",
+      "claim": "the operational quotient evaluation is injective; the image is subdirect onto every observer coordinate",
+      "source": "v0.37 S8; v0.37 S10"
+    },
+    "ML-237": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.evalProd_hom",
+      "claim": "the evaluation map is a homomorphism into the product of observer worlds",
+      "source": "v0.37 S9"
+    },
+    "ML-238": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.holdsOp_iff_holdsS",
+      "claim": "jointly separating envelopes recover the source equational theory and have zero false source equations",
+      "source": "v0.37 S12; v0.37 S13"
+    },
+    "ML-239": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.ShadowWitness.opObject_commutative_source_not",
+      "claim": "non-separating envelopes carry exact projection-shadow equations false in the source; a non-faithful envelope recovers the operational, not the hidden source, theory",
+      "source": "v0.37 S14; v0.37 S30"
+    },
+    "ML-240": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.ShadowWitness.sgn_hom",
+      "claim": "the proper quotient envelope of S3 is its abelianization C2",
+      "source": "v0.37 S17"
+    },
+    "ML-241": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.q8_d8_operationally_equivalent",
+      "claim": "the Q8 proper quotient envelope recovers a V4-sized operational object",
+      "source": "v0.37 S18"
+    },
+    "ML-242": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.faithful_iff_toOp_injective",
+      "claim": "faithfulness is equivalent to triviality of the universal observer kernel; false projection laws disappear exactly then",
+      "source": "v0.37 S31; v0.37 S37"
+    },
+    "ML-243": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.holdsOp_iff_forall_holdsW",
+      "claim": "unobservable source differences are not reintroduced by equational reasoning on the operational object; reconstruction depends on the source congruence structure, not on observer names",
+      "source": "v0.37 S25; v0.37 S33"
+    },
+    "ML-244": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.ShadowWitness.shadowFamily",
+      "claim": "the observer envelope does not assume an identity oracle observer: the sign family has none and still defines an operational object",
+      "source": "v0.37 S29"
+    },
+    "ML-245": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.q8_d8_operationally_equivalent",
+      "claim": "the positive evaluation images are equivalent",
+      "source": "v0.38 S9"
+    },
+    "ML-246": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.holdsOp_iff_forall_holdsW",
+      "claim": "the positive observers' common equational profiles are equal",
+      "source": "v0.38 S14"
+    },
+    "ML-247": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.scramble_rejected",
+      "claim": "the negative controls are not operationally equivalent and admit no natural diagram equivalence",
+      "source": "v0.38 S19; v0.38 S20"
+    },
+    "ML-248": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.operational_equivalence_stronger_than_object_profile",
+      "claim": "the negative controls give no false positive evaluation equivalence: equal object profiles are not enough",
+      "source": "v0.38 S21"
+    },
+    "ML-249": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.q8_strictKernels",
+      "claim": "the terminal observer is included in the complete strict quotient diagram",
+      "source": "v0.38 S27"
+    },
+    "ML-250": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.ontological_underdetermination",
+      "claim": "metaphysical difference is defined as a source difference invisible to all admissible observations",
+      "source": "v0.38 S36"
+    },
+    "ML-251": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.d8_q8_diagram_equivalent",
+      "claim": "operational equivalence is symmetric on the positive witness, by diagram isomorphism in both directions",
+      "source": "v0.38 S39"
+    },
+    "ML-252": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.ShadowWitness.zero_false_positives_does_not_certify",
+      "claim": "an identity oracle observer is not required for positive equivalence",
+      "source": "v0.38 S26"
+    },
+    "ML-253": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.GrammarGrowth.restricted_strictly_coarser",
+      "claim": "a restricted grammar synthesizes a strict subset of the full observer semantics",
+      "source": "v0.35 S4"
+    },
+    "ML-254": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.GrammarGrowth.restricted_blind_nontrivial",
+      "claim": "the starting science has a nontrivial blind relation and its restricted terminal relation stays nontrivial",
+      "source": "v0.35 S5; v0.35 S15"
+    },
+    "ML-255": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.GrammarGrowth.restricted_residual_is_fibre",
+      "claim": "the restricted terminal relation equals the grammar's own intersection, and the residual is exactly the nuisance fibre quotient",
+      "source": "v0.35 S16; v0.35 S17"
+    },
+    "ML-256": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.GrammarGrowth.full_blind_trivial",
+      "claim": "full-grammar operational equivalence is source identity; pair synthesis splits every distinguishable pair and never splits pairs declared identical",
+      "source": "v0.35 S11; v0.35 S12; v0.35 S13; v0.35 S18; v0.35 S19"
+    },
+    "ML-257": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.GrammarGrowth.splitter_exists_after_stall",
+      "claim": "search failure without grammar completeness is not evidence of operational identity: the full grammar still contains a splitter",
+      "source": "v0.35 S23; v0.35 S24; v0.35 S25"
+    },
+    "ML-258": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.GrammarGrowth.expansion_reaches_identity",
+      "claim": "grammar expansion refines the restricted operational quotient to source identity",
+      "source": "v0.35 S26; v0.35 S32; v0.35 S33"
+    },
+    "ML-259": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.exists_refining_observer",
+      "claim": "the synthesis objective uses split gain at every step, not equation fit",
+      "source": "v0.35 S8; v0.35 S28; v0.36 S35"
+    },
+    "ML-260": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.no_infinite_strict_refinement",
+      "claim": "synthesis terminates in finitely many semantically novel observers",
+      "source": "v0.35 S31; v0.36 S13; v0.36 S16"
+    },
+    "ML-261": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.ShadowWitness.zero_false_positives_does_not_certify",
+      "claim": "zero false equations can occur before joint faithfulness, and zero tested false equations is compatible with a nonzero blind relation",
+      "source": "v0.35 S27; v0.36 S32"
+    },
+    "ML-262": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.GrammarGrowth.sgn_admissible",
+      "claim": "the core primitives are source homomorphisms",
+      "source": "v0.36 S5"
+    },
+    "ML-263": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.GrammarGrowth.decoy_not_hom",
+      "claim": "a maximum-gain surface decoy is rejected because it is not a source homomorphism",
+      "source": "v0.36 S6; v0.36 S7"
+    },
+    "ML-264": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.GrammarGrowth.redundant_zero_gain",
+      "claim": "a source-admissible redundant primitive is accepted with zero gain",
+      "source": "v0.36 S10; v0.36 S11"
+    },
+    "ML-265": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.GrammarGrowth.admissibility_ne_utility",
+      "claim": "admissibility is not equated with split utility: gain without admissibility on one side, admissibility without gain on the other",
+      "source": "v0.36 S12"
+    },
+    "ML-266": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.GrammarGrowth.no_splitter_does_not_license",
+      "claim": "no splitter in the current grammar does not license a quotient while source-admissible growth exists",
+      "source": "v0.36 S37; v0.36 S4"
+    },
+    "ML-267": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AlgObsFamily.unresolved_antitone",
+      "claim": "grammar growth is monotone refinement only",
+      "source": "v0.36 S39"
+    },
+    "ML-268": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AuditBacklog.m16c_m17a_audit_passes",
+      "claim": "all encoded failure modes of milestones M16.3 and M17.1 are cleared",
+      "source": "formal/ProofAudit.md"
+    },
+    "ML-269": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.ShadowWitness.multiple_false_equations",
+      "claim": "the starting science supports several false universal equations",
+      "source": "v0.35 S6"
+    },
+    "ML-270": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.GrammarGrowth.three_outcomes",
+      "claim": "restricted active synthesis terminates with a certified operational quotient; the three outcomes — splitter found, search incomplete, certified no split — are distinguished by the grammar",
+      "source": "v0.35 S14; v0.35 S35"
+    },
+    "ML-271": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.GrammarGrowth.refine_or_refactor",
+      "claim": "the active science cycle refines the object when a new observer exists and refactors it when none does",
+      "source": "v0.35 S36"
+    },
+    "ML-272": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.GrammarGrowth.identity_is_hom",
+      "claim": "the oracle identity is a homomorphism; its rejection is availability, not admissibility",
+      "source": "v0.36 S8"
+    },
+    "ML-273": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Partial.istep_lo_subset_hi",
+      "claim": "the computed partial status is a genuine interval: definitely-admissible is contained in possibly-admissible",
+      "source": "v0.31 S3"
+    },
+    "ML-274": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.DiagonalSystem.diagonal_lemma",
+      "claim": "the mechanical diagonalization of v0.30 remains exact",
+      "source": "v0.31 S1"
+    },
+    "ML-275": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Partial.outcome_is_branch_set",
+      "claim": "a multi-branch or partial status is not forced into a binary truth assignment",
+      "source": "v0.30 S27"
+    },
+    "ML-276": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.multiple_presentations",
+      "claim": "a theory can have several distinct minimum axiom bases; the canonical object is the irreducible signature, not a basis",
+      "source": "v0.29 S7"
+    },
+    "ML-277": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.eq_of_irredSignature_eq",
+      "claim": "independent observers recover the same theory: the irreducible signature does not mention presentation names",
+      "source": "v0.29 S22"
+    },
+    "ML-278": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.B3.not_distributive",
+      "claim": "the same B3 semantic order gives a non-distributive full reflective logic",
+      "source": "v0.27 S23"
+    },
+    "ML-279": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.DescentDepth.Synonyms.every_action_has_synonym",
+      "claim": "every action has a distinct semantic synonym: surface symbol difference is not semantic",
+      "source": "v0.10 S10"
+    },
+    "ML-280": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.DescentDepth.Synonyms.doubled_indist_iff",
+      "claim": "a minimal extension by synonyms preserves the semantic partition",
+      "source": "v0.11 S10"
+    },
+    "ML-281": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.GrammarWitness.full_separates_zero_one",
+      "claim": "grammar growth can give substantive semantic novelty",
+      "source": "v0.11 S13"
+    },
+    "ML-282": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.operational_equivalence_weaker_than_isomorphism",
+      "claim": "an unrestricted extension admits a non-identifiability witness: observationally identical, structurally different",
+      "source": "v0.11 S12"
+    },
+    "ML-283": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.SourceFilter.principal8_size",
+      "claim": "the principal source filter grammar yields an 8-element Boolean logic",
+      "source": "v0.28 S16"
+    },
+    "ML-284": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.SourceFilter.chain3_not_boolean",
+      "claim": "a single source filter yields a 3-element Heyting non-Boolean logic",
+      "source": "v0.28 S17"
+    },
+    "ML-285": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.SourceFilter.boolean4_boolean",
+      "claim": "a two-filter source grammar yields a 4-element Boolean logic",
+      "source": "v0.28 S18"
+    },
+    "ML-286": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.SourceFilter.nondistributive13_not_distributive",
+      "claim": "a three-filter source grammar yields a 13-element non-distributive, non-modular, non-Heyting logic",
+      "source": "v0.28 S19"
+    },
+    "ML-287": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.SourceFilter.four_distinct_sizes",
+      "claim": "the same B3 semantic carrier supports four distinct generated logic sizes; expanding the filter grammar changes the logic without changing the carrier",
+      "source": "v0.28 S20; v0.28 S22; v0.28 S26"
+    },
+    "ML-288": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.SourceFilter.ignoring_admissibility_expands",
+      "claim": "ignoring source admissibility strictly expands the logic: the 8-element source logic is a proper part of the 61-condition envelope",
+      "source": "v0.28 S13; v0.28 S14; v0.27 S25",
+      "downgrade": "superseded by ML-334: the envelope generation is now verified in the kernel"
+    },
+    "ML-289": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.SourceFilter.principal8_closed",
+      "claim": "every generated source logic is closed under conjunction and hull-disjunction and consists of genuine conditions",
+      "source": "v0.28 S21"
+    },
+    "ML-290": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.SourceFilter.principal8_generated",
+      "claim": "each generated logic contains the constants and all primitives of its grammar",
+      "source": "v0.28 S2; v0.28 S3"
+    },
+    "ML-291": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AuditBacklog.m13d_filter_audit_passes",
+      "claim": "all encoded failure modes of the filter-grammar part of milestone M13d are cleared",
+      "source": "formal/ProofAudit.md"
+    },
+    "ML-292": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.SourceFilter.principal8_boolean",
+      "claim": "the B3 principal source filter grammar is Boolean",
+      "source": "v0.27 S22"
+    },
+    "ML-293": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.SourceFilter.principal_conj_stays_disj_grows",
+      "claim": "conjunction of principal filters stays principal, while disjunction can generate a new condition",
+      "source": "v0.27 S24"
+    },
+    "ML-294": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.SourceFilter.foreign_reflective_not_admissible",
+      "claim": "a reflective but source-foreign filter is rejected: source certification separates reflectivity from admissibility",
+      "source": "v0.28 S7; v0.28 S24"
+    },
+    "ML-295": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.SourceFilter.nonreflective_rejected",
+      "claim": "non-reflective near misses are rejected: they are not conditions at all",
+      "source": "v0.28 S8"
+    },
+    "ML-296": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.SourceFilter.primitive_is_essential",
+      "claim": "every source primitive basis element is logically essential: dropping one shrinks the generated logic",
+      "source": "v0.28 S10"
+    },
+    "ML-297": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.SourceFilter.ignoring_admissibility_expands",
+      "claim": "invalid foreign filters are logically useful if wrongly admitted: they expand the logic",
+      "source": "v0.28 S11"
+    },
+    "ML-298": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.Nuisance.public_behaviour_does_not_classify",
+      "claim": "every valid public filter has an observationally identical invalid nuisance mimic, logically conservative despite source invalidity",
+      "source": "v0.28 S5; v0.28 S12"
+    },
+    "ML-299": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.B3.not_distributive",
+      "claim": "the bad full envelope is non-distributive on the same B3 carrier",
+      "source": "v0.28 S15"
+    },
+    "ML-300": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.SourceFilter.utility_collides",
+      "claim": "public utility cannot be the source-admissibility criterion: two conditions of equal public selectivity have opposite admissibility labels",
+      "source": "v0.28 S23"
+    },
+    "ML-301": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.contrast_orderIso",
+      "claim": "two independent observers agree on the certified semantic filter set, since the construction is invariant under relabeling",
+      "source": "v0.28 S4"
+    },
+    "ML-302": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Orbit.trichotomy",
+      "claim": "every pair of states is exactly one of dead, immediate or latent",
+      "source": "v0.15 S7; v0.15 S8; v0.15 S9"
+    },
+    "ML-303": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Orbit.dead_is_semantically_dead",
+      "claim": "a dead pair is semantically dead: no continuation separates it",
+      "source": "v0.15 S7"
+    },
+    "ML-304": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Orbit.latent_is_future_live",
+      "claim": "a latent pair is future-live: the separating witness is a nonempty continuation",
+      "source": "v0.15 S8"
+    },
+    "ML-305": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.Orbit.source_overretains_local_underretains",
+      "claim": "the source over-retains and the local profile under-retains: both extremes fail, in opposite directions",
+      "source": "v0.15 S11; v0.15 S12; v0.15 S16; v0.15 S17"
+    },
+    "ML-306": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Orbit.orbit_is_greatest",
+      "claim": "the orbit quotient is the greatest relation compatible with response and transport: it neither loses latent distinctions nor retains dead ones",
+      "source": "v0.15 S1; v0.15 S13; v0.15 S18"
+    },
+    "ML-307": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Spectator.spectator_collapsed",
+      "claim": "spectator coordinates collapse in the orbit semantics",
+      "source": "v0.15 S14; v0.16 S21"
+    },
+    "ML-308": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Expansion.approx_full_imp_base",
+      "claim": "the old semantics factors through the new one",
+      "source": "v0.15 S15; v0.16 S6; v0.17 S21"
+    },
+    "ML-309": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Growth.TwoStep.incremental_equals_fresh",
+      "claim": "incremental grammar growth equals a fresh one-step expansion",
+      "source": "v0.16 S3"
+    },
+    "ML-310": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.GrammarWitness.full_separates_zero_one",
+      "claim": "an unlock is rejected by the old quotient and descends to the new one; semantic growth is strict",
+      "source": "v0.16 S4; v0.16 S5; v0.16 S7"
+    },
+    "ML-311": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Growth.revived_requires_new",
+      "claim": "a revived distinction requires the new continuation",
+      "source": "v0.16 S17"
+    },
+    "ML-312": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Growth.revived_min_length_three",
+      "claim": "a revived distinction can require a word of length three",
+      "source": "v0.16 S18"
+    },
+    "ML-313": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.Growth.simple_hypotheses_fail",
+      "claim": "simple one-step hypotheses fail to capture the semantics",
+      "source": "v0.16 S19"
+    },
+    "ML-314": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Growth.rollback_recovers_old",
+      "claim": "rollback recovers the old semantics exactly",
+      "source": "v0.16 S22"
+    },
+    "ML-315": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.Admissible.four_quadrants",
+      "claim": "all four quadrants of admissible-by-source against publicly-useful are realized",
+      "source": "v0.17 S6; v0.17 S7; v0.17 S8; v0.17 S9; v0.17 S24"
+    },
+    "ML-316": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.Admissible.utility_not_admissibility",
+      "claim": "utility is not admissibility: equal public utility, opposite source labels",
+      "source": "v0.17 S5"
+    },
+    "ML-317": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.Admissible.utility_grammar_wrong",
+      "claim": "the utility grammar admits the inadmissible and rejects the admissible",
+      "source": "v0.17 S11; v0.17 S12; v0.17 S13"
+    },
+    "ML-318": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Admissible.certified_equals_oracle",
+      "claim": "the certified grammar equals the oracle's admissible set",
+      "source": "v0.17 S10"
+    },
+    "ML-319": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Admissible.Grammar.adm_append",
+      "claim": "composition preserves source admissibility",
+      "source": "v0.17 S22"
+    },
+    "ML-320": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Nuisance.public_behaviour_does_not_classify",
+      "claim": "useful and conservative mimics match publicly while differing at the source",
+      "source": "v0.17 S17; v0.17 S18"
+    },
+    "ML-321": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Machine.indist_relabel_iff",
+      "claim": "state renaming leaves the semantics invariant",
+      "source": "v0.17 S23"
+    },
+    "ML-322": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AuditBacklog.m10_audit_passes",
+      "claim": "all encoded failure modes of milestone M10 are cleared",
+      "source": "formal/ProofAudit.md"
+    },
+    "ML-323": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Machine.stabilization",
+      "claim": "concept formation is quotient refinement, and the minimal refinement is canonical: the semantic quotient stabilizes on a finite carrier",
+      "source": "v0.12 S10"
+    },
+    "ML-324": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Spectator.spectator_collapsed",
+      "claim": "the extension is conservative on nuisance: spectator coordinates collapse and nothing is over-split",
+      "source": "v0.12 S11; v0.13 S14"
+    },
+    "ML-325": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Expansion.approx_full_imp_base",
+      "claim": "the old language projects homomorphically onto the refined one",
+      "source": "v0.12 S12; v0.13 S15"
+    },
+    "ML-326": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Machine.exists_witness_of_not_indist",
+      "claim": "every semantic distinction has a finite one-step-reachable witness word",
+      "source": "v0.12 S15; v0.13 S13"
+    },
+    "ML-327": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Multiscale.exists_sep_eq",
+      "claim": "latent distinction search finds the exact minimal witness depth, and reference propagation depth is recovered",
+      "source": "v0.13 S3; v0.13 S18"
+    },
+    "ML-328": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.World.exists_noncommutative_world",
+      "claim": "a reversed witness word does not split: continuation order is semantically load-bearing",
+      "source": "v0.13 S17"
+    },
+    "ML-329": {
+      "status": "refuted",
+      "lean_theorem": "MetaLang.not_forall_source_distinction_relevant",
+      "claim": "v0.14 is a deliberate FAIL: a source distinction need not be semantic",
+      "source": "v0.14 S1"
+    },
+    "ML-330": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Partial.exists_stable_iterI",
+      "claim": "iterating the interval lift from full unknown always reaches a canonical least partial fixed point on a finite branch set",
+      "source": "v0.31 S5"
+    },
+    "ML-331": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Partial.exact_mem_iterI",
+      "claim": "every exact fixed point is contained in the partial status at every step of the iteration",
+      "source": "v0.31 S6"
+    },
+    "ML-332": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Partial.singleton_stable_is_exact",
+      "claim": "a singleton stable partial fixed point is always an exact solution",
+      "source": "v0.31 S7"
+    },
+    "ML-333": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Partial.constPhi_exact_in_one_step",
+      "claim": "a source partial fixed point is exact in one refinement step or less",
+      "source": "v0.31 S15"
+    },
+    "ML-334": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.SourceFilter.full_envelope_generated",
+      "claim": "every condition is a disjunction of principal conditions, so admitting every reflective condition reaches the full 61-condition envelope while the certified source logic stays at eight",
+      "source": "v0.28 S14"
+    },
+    "ML-335": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.AuditBacklog.gaps_closed_audit_passes",
+      "claim": "the encoded failure modes of the two closed gaps are cleared",
+      "source": "formal/ProofAudit.md"
+    },
+    "ML-336": {
+      "status": "proved",
+      "lean_theorem": "MetaLang.Partial.completion_preserves_but_incomplete",
+      "claim": "partial completion preserves all exact solutions but can be incomplete: the liar's completion stays the full four-configuration interval",
+      "source": "v0.31 S27"
+    }
+  },
+  "not_formalized_by_design": [
+    "Goedel incompleteness (explicitly forbidden by v0.29 and v0.30 protocols)",
+    "W = projection(S)",
+    "the physical world literally is S",
+    "existence of a nonlocal physical S-channel",
+    "validity of the synthetic generators as evidence about reality",
+    "numeric population thresholds of the experiments (means, rates over the 32 worlds)",
+    "the profinite topology on S^N as an inverse limit (v0.23 section 8) - the prefix-filtration form is formalized instead",
+    "the topological gluing lemma over an open cover of QxQ (v0.23 section 6) - the filtration form is formalized instead",
+    "the category Alg_ASC of ASC-filtered algebras (v0.22 section 9)",
+    "depth-12 Cantor instrument audits of v0.24-v0.26 (numeric truncations, not theorems)",
+    "a universal-property derivation of the contrast operation (v0.24 section 9 states this is open)",
+    "the 'myth / superstition' epistemic analogy as a claim about culture (v0.33 section 5, v0.34 section 5 forbid it themselves)",
+    "the boundary object B_Phi of v0.32 sections 1-2 (recurrent kernel, cycles, basins)",
+    "instrument enumeration gates of the observation arc (v0.33 S1 S2 S30, v0.34 S32, v0.36 S36 S38, v0.37 S2 S24 S38)",
+    "operational estimation of information gain without algebraic kernels (v0.34 section 6)",
+    "exact chain class counts of v0.18 S8 and the depth-12 distortion figures of v0.19 S16, v0.21 S21 (numeric measurements)",
+    "the 4096-prefix-state instrument audits of v0.25 S20, v0.26 S23, v0.27 S26, v0.28 S25 (numeric truncation depth)",
+    "v0.32 S27 and S30: declarations that the boundary object is a diagnostic rather than an exact solver, and that v0.32 closes the reason-for-unresolvedness at the finite deterministic level",
+    "v0.33 S31: the declaration that the experiment makes no empirical claim that the physical world is a projection of S",
+    "v0.34 S9 and S10: exact minimum counts of new observers on the frozen family (numeric measurement)",
+    "v0.34 S16, S17, S31: comparative speed of random versus active search on the frozen population, and the declaration that no claim is made about a real experimenter knowing the ontic source",
+    "v0.37 S15, S16, S19-S22, S27, S36: reconstruction checks on the specific frozen group families and the closing declarations (enumeration over the frozen population)",
+    "v0.38 S16, S17, S32, S38: the counts of common truths on the frozen equation grammar and the closing scope declarations",
+    "v0.35 S9 and v0.36 S1, S3, S15, S30, S31: exact counts on the frozen population (state count, blind-pair count, minimum additions, false-equation counts)",
+    "v0.36 S9, S17, S19, S22-S27, S40: the no_b / core_only / open_all growth modes of the frozen v0.36 source, which require that population's parity grammar and its availability predicate rather than a theorem about arbitrary families",
+    "v0.30 S1, S9, S10, S18, S24 and v0.31 S18-S21, S26, S29: random Goedel codings and 512-map ternary audits (instrument enumeration), the minimality of surviving branches in the extension lattice that the Bool branch model collapses (v0.29 S13 and v0.30 S18), and the closing scope declarations",
+    "v0.15 S2-S6, S10 and v0.16 S1, S2, S8, S10-S16, S20 and v0.17 S1, S3, S4, S14-S16, S19, S20: per-family exactness rates, agreement rates, sparse-basis and random-budget comparisons on the frozen population",
+    "v0.12, v0.13 and v0.14 number their gates as bare S1..Sn; the remaining ones are exact-rate thresholds (>= .99, == 1.0) on the frozen population, read from run_experiment.py and classified as numeric"
+  ]
+}

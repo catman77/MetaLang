@@ -1,0 +1,38 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["5f3e03a71e811152.olean"],
+  "i": "485fea42b4dc4e51.ilean",
+  "c": "67921dcdd17e7b4d.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/catman/CatmanCode/SymStructures-RH/.lake/packages/Cli/.lake/build/lib/lean:/home/catman/CatmanCode/SymStructures-RH/.lake/packages/batteries/.lake/build/lib/lean:/home/catman/CatmanCode/SymStructures-RH/.lake/packages/Qq/.lake/build/lib/lean:/home/catman/CatmanCode/SymStructures-RH/.lake/packages/aesop/.lake/build/lib/lean:/home/catman/CatmanCode/SymStructures-RH/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/catman/CatmanCode/SymStructures-RH/.lake/packages/importGraph/.lake/build/lib/lean:/home/catman/CatmanCode/SymStructures-RH/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/catman/CatmanCode/SymStructures-RH/.lake/packages/plausible/.lake/build/lib/lean:/home/catman/CatmanCode/SymStructures-RH/.lake/packages/mathlib/.lake/build/lib/lean:/home/catman/CatmanCode/MetaLang/formal/.lake/build/lib/lean /home/catman/.elan/toolchains/leanprover--lean4---v4.29.0-rc8/bin/lean -DautoImplicit=false -DrelaxedAutoImplicit=false /home/catman/CatmanCode/MetaLang/formal/MetaLang/Gluing.lean -o /home/catman/CatmanCode/MetaLang/formal/.lake/build/lib/lean/MetaLang/Gluing.olean -i /home/catman/CatmanCode/MetaLang/formal/.lake/build/lib/lean/MetaLang/Gluing.ilean -c /home/catman/CatmanCode/MetaLang/formal/.lake/build/ir/MetaLang/Gluing.c --setup /home/catman/CatmanCode/MetaLang/formal/.lake/build/ir/MetaLang/Gluing.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "MetaLang/Gluing.lean:41:22: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
+   "level": "warning"}],
+ "inputs":
+ [["MetaLang.Gluing:deps",
+   [["deps",
+     [["MetaLang/MetaLang:extraDep",
+       [["@MetaLang:extraDep", "00000000000006bb"]]],
+      ["imports",
+       [["MetaLang.MeaningWitnesses transitive imports (legacy)",
+         "01dbc0b9040d7f9c"],
+        ["MetaLang.MeaningWitnesses:importAllArts", "c86820bd5ea30178"]]]]],
+    ["libs",
+     [["import dynlibs", "00000000000006bb"],
+      ["package external libraries", "00000000000006bb"],
+      ["module dynlibs", "00000000000006bb"],
+      ["module plugins", "00000000000006bb"]]]]],
+  ["Lean 4.29.0, commit 513160ea59dfd60defec325636bbc5215a8a6e7e",
+   "76ce528f9bbd32d8"],
+  ["/home/catman/CatmanCode/MetaLang/formal/MetaLang/Gluing.lean",
+   "f367818c02520bde"],
+  ["options", "00000000000006bb"],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: MetaLang.Gluing", "d51afa246a33d915"],
+  ["Package.id?: (some MetaLang)", "4ccb955abe3c275e"],
+  ["Module.leanArgs: #[-DautoImplicit=false, -DrelaxedAutoImplicit=false]",
+   "05273b00ae821682"]],
+ "depHash": "3a42213a6dde6136"}
